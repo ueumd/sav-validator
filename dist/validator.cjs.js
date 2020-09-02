@@ -2,7 +2,7 @@
 
 /*
  * String validation
- * https://github.com/ueumd/validator.js
+ * https://github.com/ueumd/sav-validator
  */
 const ValidatorRules = {
   required(value, errorMsg) {
@@ -28,10 +28,6 @@ class Validator {
 
   constructor() {
     this.hooks = [];
-  }
-
-  get rules2 () {
-    return ValidatorRules
   }
 
   init(){

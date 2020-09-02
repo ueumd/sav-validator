@@ -1,6 +1,6 @@
 /*
  * String validation
- * https://github.com/ueumd/sav-validator.js
+ * https://github.com/ueumd/sav-validator
  */
 const ValidatorRules = {
   required(value, errorMsg) {
