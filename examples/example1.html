@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validator</title>
+  <style>
+    #app {
+      width: 30%;
+      margin: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group {
+      margin: 10px 0;
+    }
+
+    label {
+      display: inline-block
+    }
+
+    .left {
+      width: 90px;
+      text-align: right;
+      margin-right: 5px
+    }
+
+    input {
+      border: 1px solid #ccc;
+      padding: 5px
+    }
+
+    button {
+      margin-left: 100px;
+      padding: 8px 20px;
+      background: #0099fe;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px
+    }
+
+    .err {
+      margin-left: 100px;
+      color: red;
+      font-size: 12px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+<script type="module">
+  import Validator from '../dist/validator.esm.js'
+
+  // 添加自定义的验证方法
+  Validator.rules['@'] = (value, message) => {
+    return ~value.indexOf('@') === 0 ? message : void 0
+  }
+
+  Validator.rules['isNumber'] = (value, message) => {
+    return /^\d+$|^\d*\.\d{1,2}$/.test(value) ? void 0 : message
+  }
+
+
+  let msg = Validator.rules.phone('139123456781', '手机号码格式不正确')
+  if(msg) {
+    console.error(msg)
+  } else {
+    console.log('ok')
+  }
+
+  msg = Validator.rules['@']('123@xx.com', '没有@符号')
+  if(msg) {
+    console.error(msg)
+  } else {
+    console.log('ok')
+  }
+
+  msg = Validator.rules.isNumber('11.123', '只能输入数字，小数点后只能保留一位或两位')
+  if(msg) {
+    console.error(msg)
+  } else {
+    console.log('ok')
+  }
+
+
+</script>
+</body>
+</html>
