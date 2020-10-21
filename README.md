@@ -2,6 +2,8 @@
 - 轻量极小简单的JavaScript表单验证，字符串验证，无依赖
 - 可自定义验证规则
 
+uni-app: https://ext.dcloud.net.cn/plugin?id=2589#detail
+
 ## 安装使用
 
 ### 模块
