@@ -1,9 +1,36 @@
-language: node_js
+language : node_js
 node_js:
-  - "8"
-deploy:
-  provider: npm
-  email: 51134642@qq.com
-  skip_cleanup: true
-  api_key:
-    secure: "$API_KEY"
+ - "12"
+install:
+- npm install
+os:
+ - linux
+
+stages:
+ - test
+ - name: deploy
+
+jobs:
+ include:
+   - stage: test
+     script:
+       - node --version
+       - npm --version
+       - echo "Testing Started ..."
+       - npm test
+       - echo "Testing Finished."
+
+   - stage: deploy
+     script:
+       - echo "NPM Deploying Started ..."
+       - npm version
+       - npm run build
+       - echo "NPM Building Finished."
+
+     deploy:
+       provider: npm
+       email: 51134642@qq.com
+       api_key: "$NPM_TOKEN"
+       skip_cleanup: true
+       on:
+         all_branches: true
