@@ -9,7 +9,6 @@ uni-app: https://ext.dcloud.net.cn/plugin?id=2589#detail
 npm i -S sav-validator
 ```
 
-
 ### 模块
 npm install tr​​avis-encrypt -g
 ## 客户端使用
