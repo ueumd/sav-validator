@@ -1,6 +1,6 @@
 {
   "name": "sav-validator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "String validation",
   "homepage": "https://github.com/ueumd/sav-validator",
   "main": "dist/validator.esm.js",
@@ -26,7 +26,7 @@
     "@babel/preset-env": "^7.11.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "rollup": "^2.26.4",
+    "rollup": "^2.52.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-uglify": "^6.0.4",
     "semantic-release": "^17.4.4"
