@@ -5,7 +5,9 @@
 uni-app: https://ext.dcloud.net.cn/plugin?id=2589#detail
 
 ## 安装使用
+```json
 npm i -S sav-validator
+```
 
 ### 模块
 
