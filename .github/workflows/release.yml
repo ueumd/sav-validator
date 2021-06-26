@@ -24,4 +24,3 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         - run: npm install
         - run: npm run build
-        - run: npx semantic-release
