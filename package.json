@@ -1,6 +1,6 @@
 {
   "name": "sav-validator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "String validation",
   "homepage": "https://github.com/ueumd/sav-validator",
   "main": "dist/validator.esm.js",
