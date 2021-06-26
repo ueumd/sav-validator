@@ -18,6 +18,9 @@
     "validation",
     "validate"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "ueumd",
   "license": "MIT",
   "dependencies": {},
