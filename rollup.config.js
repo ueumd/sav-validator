@@ -1,5 +1,3 @@
-import {uglify} from "rollup-plugin-uglify";
-import babel from "rollup-plugin-babel";
 const pack = require('./package.json')
 const YEAR = new Date().getFullYear()
 export default {
