@@ -6,4 +6,4 @@ deploy:
   email: 51134642@qq.com
   skip_cleanup: true
   api_key:
-    secure:f51c7f5e1ede5de772750584a7297eeedb7f7054
+    secure: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
