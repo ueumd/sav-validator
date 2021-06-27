@@ -1,5 +1,4 @@
 name: Publish to NPM registry
-
 on:
   push:
     branches:
