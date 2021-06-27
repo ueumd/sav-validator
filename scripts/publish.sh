@@ -5,7 +5,6 @@
 # echo "//${REGISTRY}/:_authToken=${TOKEN}" > .npmrc
 
 cat package.json \
-| grep -v '"private":' \
 | grep -v '"version":' \
 | sed "s/\(\"name\": \"sav-validator\"\)/\1,\n  \"version\": \"${TAG_VERSION}\"/g" > package.json.bak
 
